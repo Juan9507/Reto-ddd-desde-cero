@@ -1,4 +1,18 @@
 package org.example.areatransporteaereo.mercancia;
 
-public class Clasificacion {
+import co.com.sofka.domain.generic.Entity;
+import org.example.areatransporteaereo.mercancia.values.ClasificacionId;
+import org.example.areatransporteaereo.mercancia.values.Descripcion;
+import org.example.areatransporteaereo.mercancia.values.TipoDeMercancia;
+
+public class Clasificacion extends Entity<ClasificacionId> {
+
+    //Objeto de valor
+    private Descripcion descripcion;
+    private TipoDeMercancia tipoDeMercancia;
+
+
+    public Clasificacion(ClasificacionId entityId) {
+        super(entityId);
+    }
 }

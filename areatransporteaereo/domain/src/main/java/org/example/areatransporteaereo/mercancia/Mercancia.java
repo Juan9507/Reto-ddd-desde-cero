@@ -7,6 +7,10 @@ public class Mercancia extends AggregateEvent<MercanciaId> {
 
     //Entidad
     private Clasificacion clasificacion;
+    //Entidad
+    private Operacion operacion;
+    //Entidad
+    private Remitente remitente;
 
     public Mercancia(MercanciaId entityId) {
         super(entityId);

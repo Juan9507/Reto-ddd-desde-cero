@@ -10,8 +10,6 @@ public class Clasificacion extends Entity<ClasificacionId> {
     //Objeto de valor
     private Descripcion descripcion;
     private TipoDeMercancia tipoDeMercancia;
-
-
     public Clasificacion(ClasificacionId entityId, Descripcion descripcion,
                          TipoDeMercancia tipoDeMercancia) {
         super(entityId);
@@ -19,7 +17,7 @@ public class Clasificacion extends Entity<ClasificacionId> {
         this.tipoDeMercancia = tipoDeMercancia;
     }
 
-    public void cambiarDescripcionDeClasificacion(String descripcionClasificado){
+    public void cambiarDescripcion(String descripcionClasificado){
         this.descripcion = descripcion.cambiarDescripcion(descripcionClasificado);
     }
 }

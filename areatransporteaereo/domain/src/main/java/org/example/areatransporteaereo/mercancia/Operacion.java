@@ -12,6 +12,7 @@ public class Operacion extends Entity<OperacionId> {
 
     public Operacion(OperacionId entityId, ImportacionExportacion importacionExportacion) {
         super(entityId);
+        this.importacionExportacion = importacionExportacion;
     }
 
     public void actaulizarTipoDeImportacionExportacion(TipoImportacion tipoImportacion){

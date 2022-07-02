@@ -12,6 +12,9 @@ public class Remitente extends Entity<RemitenteId> {
     public Remitente(RemitenteId entityId, Nombre nombre, Identidad identidad,
                      Destinario destinario) {
         super(entityId);
+        this.nombre = nombre;
+        this.identidad = identidad;
+        this.destinario = destinario;
     }
 
     public void cambiarDatosDelDestinario(DatosPersona datosPersona){

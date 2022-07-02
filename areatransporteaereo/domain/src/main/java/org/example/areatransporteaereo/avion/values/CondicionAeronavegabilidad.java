@@ -6,8 +6,8 @@ import java.util.Objects;
 
 public class CondicionAeronavegabilidad implements ValueObject<CondicionAeronavegabilidad.Props> {
 
-    private Condicion condicion;
-    private String description;
+    private final Condicion condicion;
+    private final String description;
 
     public CondicionAeronavegabilidad(Condicion condicion, String description) {
         this.condicion = Objects.requireNonNull(condicion);
@@ -22,7 +22,7 @@ public class CondicionAeronavegabilidad implements ValueObject<CondicionAeronave
      * @param condicion - la nueva condicion
      * @return - el nuevo objeto
      */
-    public CondicionAeronavegabilidad ActualizaCondicion(Condicion condicion){
+    public CondicionAeronavegabilidad ActualizarCondicion(Condicion condicion){
         return new CondicionAeronavegabilidad(condicion,description);
     }
 

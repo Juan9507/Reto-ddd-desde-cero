@@ -6,8 +6,8 @@ import java.util.Objects;
 
 public class TipoDeMercancia implements ValueObject<TipoDeMercancia.Props> {
 
-    private String decripcion;
-    private String tipo;
+    private final String decripcion;
+    private final String tipo;
 
     public TipoDeMercancia(String decripcion, String tipo) {
         this.decripcion = Objects.requireNonNull(decripcion);

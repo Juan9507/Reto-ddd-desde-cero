@@ -6,8 +6,8 @@ import java.util.Objects;
 
 public class Identidad implements ValueObject<Identidad.Props> {
 
-    private TipoIdentidad tipoIdentidad;
-    private String valor;
+    private final TipoIdentidad tipoIdentidad;
+    private final String valor;
 
     public Identidad(TipoIdentidad tipoIdentidad, String valor) {
         this.tipoIdentidad = Objects.requireNonNull(tipoIdentidad);

@@ -6,8 +6,8 @@ import java.util.Objects;
 
 public class Peso implements ValueObject<Peso.Props> {
 
-    private String tipo;
-    private Integer peso;
+    private final String tipo;
+    private final Integer peso;
 
     public Peso(String tipo, Integer peso) {
         this.tipo = Objects.requireNonNull(tipo);

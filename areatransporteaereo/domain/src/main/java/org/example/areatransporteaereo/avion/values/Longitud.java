@@ -6,9 +6,9 @@ import java.util.Objects;
 
 public class Longitud implements ValueObject<Longitud.Props> {
 
-    private Integer alto;
-    private Integer largo;
-    private Integer ancho;
+    private final Integer alto;
+    private final Integer largo;
+    private final Integer ancho;
 
     public Longitud(Integer alto, Integer largo, Integer ancho) {
         this.alto = Objects.requireNonNull(alto);

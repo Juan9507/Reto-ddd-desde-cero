@@ -19,6 +19,6 @@ public class CertificadoAeronavegabilidad extends Entity<CertificadoAeronavegabi
      * Comportamiento Actualizar condicion
      */
     public void actualizarCondicion(Condicion condicion){
-        this.condicionAeronavegabilidad = condicionAeronavegabilidad.ActualizaCondicion(condicion);
+        this.condicionAeronavegabilidad = condicionAeronavegabilidad.ActualizarCondicion(condicion);
     }
 }

@@ -12,7 +12,14 @@ public class Clasificacion extends Entity<ClasificacionId> {
     private TipoDeMercancia tipoDeMercancia;
 
 
-    public Clasificacion(ClasificacionId entityId) {
+    public Clasificacion(ClasificacionId entityId, Descripcion descripcion,
+                         TipoDeMercancia tipoDeMercancia) {
         super(entityId);
+        this.descripcion = descripcion;
+        this.tipoDeMercancia = tipoDeMercancia;
+    }
+
+    public void cambiarDescripcionDeClasificacion(String descripcionClasificado){
+        this.descripcion = descripcion.cambiarDescripcion(descripcionClasificado);
     }
 }

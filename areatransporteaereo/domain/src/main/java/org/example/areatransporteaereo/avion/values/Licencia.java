@@ -6,8 +6,8 @@ import java.util.Objects;
 
 public class Licencia implements ValueObject<Licencia.Props> {
 
-    private Nombre nombre;
-    private Estado estado;
+    private final Nombre nombre;
+    private final Estado estado;
 
     public Licencia(Nombre nombre, Estado estado) {
         this.nombre = Objects.requireNonNull(nombre);

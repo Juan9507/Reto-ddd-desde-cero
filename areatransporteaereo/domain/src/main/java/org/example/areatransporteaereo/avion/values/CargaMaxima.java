@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class CargaMaxima implements ValueObject<Object> {
 
-    private Peso peso;
+    private final Peso peso;
 
     public CargaMaxima(Peso peso) {
         this.peso = Objects.requireNonNull(peso);

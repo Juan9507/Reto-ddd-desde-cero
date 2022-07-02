@@ -6,8 +6,8 @@ import java.util.Objects;
 
 public class Pais implements ValueObject<Pais.Props> {
 
-    private String codigoPais;
-    private String nombrePais;
+    private final String codigoPais;
+    private final String nombrePais;
 
     public Pais(String codigoPais, String nombrePais) {
         this.codigoPais = Objects.requireNonNull(codigoPais);

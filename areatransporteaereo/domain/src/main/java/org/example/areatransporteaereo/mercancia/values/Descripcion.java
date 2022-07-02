@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class Descripcion implements ValueObject<String> {
 
-    private String descripcion;
+    private final String descripcion;
 
     public Descripcion(String descripcion) {
         this.descripcion = Objects.requireNonNull(descripcion);
@@ -15,5 +15,9 @@ public class Descripcion implements ValueObject<String> {
     @Override
     public String value() {
         return descripcion;
+    }
+
+    public Descripcion cambiarDescripcion(String descripcion){
+        return new Descripcion(descripcion);
     }
 }

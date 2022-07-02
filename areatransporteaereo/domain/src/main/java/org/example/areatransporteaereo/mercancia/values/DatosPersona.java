@@ -6,8 +6,8 @@ import java.util.Objects;
 
 public class DatosPersona implements ValueObject<DatosPersona.Props> {
 
-    private String nombreCompleto;
-    private String direccion;
+    private final String nombreCompleto;
+    private final String direccion;
 
     public DatosPersona(String nombreCompleto, String direccion) {
         this.nombreCompleto = Objects.requireNonNull(nombreCompleto);

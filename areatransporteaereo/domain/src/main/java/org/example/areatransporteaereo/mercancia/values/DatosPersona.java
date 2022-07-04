@@ -33,4 +33,17 @@ public class DatosPersona implements ValueObject<DatosPersona.Props> {
         String nombreCompleto();
         String direccion();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof DatosPersona)) return false;
+        DatosPersona that = (DatosPersona) o;
+        return Objects.equals(nombreCompleto, that.nombreCompleto) && Objects.equals(direccion, that.direccion);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombreCompleto, direccion);
+    }
 }

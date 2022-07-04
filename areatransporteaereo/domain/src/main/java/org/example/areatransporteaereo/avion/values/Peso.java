@@ -33,4 +33,17 @@ public class Peso implements ValueObject<Peso.Props> {
         String tipo();
         Integer peso();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Peso)) return false;
+        Peso peso1 = (Peso) o;
+        return Objects.equals(tipo, peso1.tipo) && Objects.equals(peso, peso1.peso);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(tipo, peso);
+    }
 }

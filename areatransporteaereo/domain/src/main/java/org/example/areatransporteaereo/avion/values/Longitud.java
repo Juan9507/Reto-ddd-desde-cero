@@ -41,4 +41,17 @@ public class Longitud implements ValueObject<Longitud.Props> {
         Integer largo();
         Integer ancho();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Longitud)) return false;
+        Longitud longitud = (Longitud) o;
+        return Objects.equals(alto, longitud.alto) && Objects.equals(largo, longitud.largo) && Objects.equals(ancho, longitud.ancho);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(alto, largo, ancho);
+    }
 }

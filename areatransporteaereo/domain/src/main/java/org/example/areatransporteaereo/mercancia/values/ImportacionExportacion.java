@@ -20,4 +20,17 @@ public class ImportacionExportacion implements ValueObject<Object> {
     public ImportacionExportacion actualizarTipo(TipoImportacion tipoImportacion){
         return new ImportacionExportacion(tipoImportacion);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ImportacionExportacion)) return false;
+        ImportacionExportacion that = (ImportacionExportacion) o;
+        return tipoImportacion == that.tipoImportacion;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(tipoImportacion);
+    }
 }

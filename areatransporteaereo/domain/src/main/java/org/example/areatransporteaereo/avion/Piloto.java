@@ -7,6 +7,8 @@ import org.example.areatransporteaereo.avion.values.Licencia;
 import org.example.areatransporteaereo.avion.values.Nombre;
 import org.example.areatransporteaereo.avion.values.PilotoId;
 
+import java.util.Objects;
+
 public class Piloto extends Entity<PilotoId> {
 
     private Licencia licencia;
@@ -18,6 +20,9 @@ public class Piloto extends Entity<PilotoId> {
         this.nombre = nombre;
     }
 
+    public void actualizarNombre(Nombre nombre){
+        this.nombre = Objects.requireNonNull(nombre);
+    }
     public void actualizarEstadoLiciencia(Estado estado){
         this.licencia = licencia.actualizarEstadoLicencia(estado);
     }

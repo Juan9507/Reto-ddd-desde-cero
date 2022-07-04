@@ -33,4 +33,17 @@ public class TipoDeMercancia implements ValueObject<TipoDeMercancia.Props> {
         String descripcion();
         String tipo(); //ej: liviano, pesado, flagil
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof TipoDeMercancia)) return false;
+        TipoDeMercancia that = (TipoDeMercancia) o;
+        return Objects.equals(decripcion, that.decripcion) && Objects.equals(tipo, that.tipo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(decripcion, tipo);
+    }
 }

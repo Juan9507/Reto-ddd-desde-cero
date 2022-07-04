@@ -33,4 +33,17 @@ public class NombreEncargado implements ValueObject<NombreEncargado.Props> {
         String nombre();
         String apellido();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof NombreEncargado)) return false;
+        NombreEncargado that = (NombreEncargado) o;
+        return Objects.equals(nombre, that.nombre) && Objects.equals(apellido, that.apellido);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre, apellido);
+    }
 }

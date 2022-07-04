@@ -33,4 +33,17 @@ public class Pais implements ValueObject<Pais.Props> {
         String codigoPais();
         String nombrePais();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Pais)) return false;
+        Pais pais = (Pais) o;
+        return Objects.equals(codigoPais, pais.codigoPais) && Objects.equals(nombrePais, pais.nombrePais);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(codigoPais, nombrePais);
+    }
 }

@@ -20,4 +20,17 @@ public class CargaMaxima implements ValueObject<Object> {
     public Peso value() {
         return peso;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof CargaMaxima)) return false;
+        CargaMaxima that = (CargaMaxima) o;
+        return Objects.equals(peso, that.peso);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(peso);
+    }
 }

@@ -1,4 +1,4 @@
-package org.example.areatransporteaereo.transporte;
+package org.example.areatransporteaereo.transporte.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
@@ -36,5 +36,18 @@ public class Telefono implements ValueObject<Telefono.Props> {
     public interface Props {
         String indicativo();
         Integer numero();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Telefono)) return false;
+        Telefono telefono = (Telefono) o;
+        return Objects.equals(indicativo, telefono.indicativo) && Objects.equals(numero, telefono.numero);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(indicativo, numero);
     }
 }

@@ -40,4 +40,17 @@ public class Licencia implements ValueObject<Licencia.Props> {
         Nombre nombre();
         Estado estado();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Licencia)) return false;
+        Licencia licencia = (Licencia) o;
+        return Objects.equals(nombre, licencia.nombre) && estado == licencia.estado;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre, estado);
+    }
 }

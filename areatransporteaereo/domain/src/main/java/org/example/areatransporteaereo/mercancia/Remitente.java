@@ -17,7 +17,11 @@ public class Remitente extends Entity<RemitenteId> {
         this.destinario = destinario;
     }
 
-    public void cambiarDatosDelDestinario(DatosPersona datosPersona){
+    /**
+     * Cambiar datos del destinario
+     * @param datosPersona
+     */
+    public void cambiarDatosDestinario(DatosPersona datosPersona){
         this.destinario = destinario.cambiarDatos(datosPersona);
     }
 }

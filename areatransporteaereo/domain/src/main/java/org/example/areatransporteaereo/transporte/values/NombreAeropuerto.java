@@ -16,4 +16,17 @@ public class NombreAeropuerto implements ValueObject<String> {
     public String value() {
         return nombreAeropuerto;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof NombreAeropuerto)) return false;
+        NombreAeropuerto that = (NombreAeropuerto) o;
+        return Objects.equals(nombreAeropuerto, that.nombreAeropuerto);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombreAeropuerto);
+    }
 }

@@ -22,4 +22,6 @@ public class Contenedor extends Entity<ContenedorId> {
     public void ActualizarCargaMaxima(Peso peso){
         this.cargaMaxima = cargaMaxima.ActualizarCargaMaxima(peso);
     }
+
+
 }

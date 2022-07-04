@@ -20,4 +20,17 @@ public class CodigoIcao implements ValueObject<Integer> {
     public Integer value() {
         return codigoIcao;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof CodigoIcao)) return false;
+        CodigoIcao that = (CodigoIcao) o;
+        return Objects.equals(codigoIcao, that.codigoIcao);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(codigoIcao);
+    }
 }

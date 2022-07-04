@@ -4,18 +4,18 @@ import co.com.sofka.domain.generic.DomainEvent;
 import org.example.areatransporteaereo.mercancia.values.ImportacionExportacion;
 import org.example.areatransporteaereo.mercancia.values.OperacionId;
 
-public class operacionAgregada extends DomainEvent {
-    private final OperacionId operacionIdId;
+public class OperacionMercanciaAgregada extends DomainEvent {
+    private final OperacionId entityId;
     private final ImportacionExportacion importacionExportacion;
 
-    public operacionAgregada(OperacionId operacionIdId, ImportacionExportacion importacionExportacion) {
-        super("org.example.areatransporteaereo.operacionAgregada");
-        this.operacionIdId = operacionIdId;
+    public OperacionMercanciaAgregada(OperacionId entityId, ImportacionExportacion importacionExportacion) {
+        super("org.example.areatransporteaereo.mercancia.OperacionAgregada");
+        this.entityId = entityId;
         this.importacionExportacion = importacionExportacion;
     }
 
-    public OperacionId getOperacionIdId() {
-        return operacionIdId;
+    public OperacionId getEntityId() {
+        return entityId;
     }
 
     public ImportacionExportacion getImportacionExportacion() {

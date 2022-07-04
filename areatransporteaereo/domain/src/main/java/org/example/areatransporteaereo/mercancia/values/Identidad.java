@@ -33,4 +33,17 @@ public class Identidad implements ValueObject<Identidad.Props> {
         TipoIdentidad tipoIdentidad(); //enum
         String valor();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Identidad)) return false;
+        Identidad identidad = (Identidad) o;
+        return tipoIdentidad == identidad.tipoIdentidad && Objects.equals(valor, identidad.valor);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(tipoIdentidad, valor);
+    }
 }

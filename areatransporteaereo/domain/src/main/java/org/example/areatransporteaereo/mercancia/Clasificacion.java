@@ -17,7 +17,18 @@ public class Clasificacion extends Entity<ClasificacionId> {
         this.tipoDeMercancia = tipoDeMercancia;
     }
 
-    public void cambiarDescripcion(String descripcionClasificado){
-        this.descripcion = descripcion.cambiarDescripcion(descripcionClasificado);
+    /**
+     * Comportamiento Cambiar Descripcion
+     */
+    public void cambiarDescripcion(Descripcion descripcion){
+        this.descripcion = descripcion;
+    }
+
+    public Descripcion descripcion() {
+        return descripcion;
+    }
+
+    public TipoDeMercancia tipoDeMercancia() {
+        return tipoDeMercancia;
     }
 }

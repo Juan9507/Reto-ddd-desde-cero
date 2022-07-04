@@ -14,9 +14,15 @@ public class Destinario implements ValueObject<Destinario.Props> {
         this.pais = Objects.requireNonNull(pais);
     }
 
+    /**
+     * Cambiar datos persona
+     * @param datosPersona
+     * @return
+     */
     public Destinario cambiarDatos(DatosPersona datosPersona){
         return new Destinario(datosPersona,pais);
     }
+
     @Override
     public Destinario.Props value() {
         return new Props() {
@@ -35,6 +41,18 @@ public class Destinario implements ValueObject<Destinario.Props> {
     public interface Props {
         DatosPersona datosPersona();
         Pais pais();
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Destinario)) return false;
+        Destinario that = (Destinario) o;
+        return Objects.equals(datosPersona, that.datosPersona) && Objects.equals(pais, that.pais);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(datosPersona, pais);
     }
 }
